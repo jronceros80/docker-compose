@@ -1,0 +1,20 @@
+version: '2.1'
+
+# Define los servicios/contenedores que se van ejecutar
+services:
+  angular: # Nombre del primer servicio
+    build: spotify-app # Especifica el directorio donde se encuentra el Dockerfile
+    ports:
+    - "4200:4200" # Especifica los puertos de mapeo
+    links:
+    - node # Enlace al servicio node
+  node: 
+    build: spotify-api 
+    ports:
+    - "3000:3000" 
+    links:
+    - database
+  database:
+    image: mongo # Especifica la imagen para construir el contenedor
+    ports:
+    - "27017:27017"
