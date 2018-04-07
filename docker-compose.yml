@@ -6,8 +6,6 @@ services:
     build: spotify-app # Especifica el directorio donde se encuentra el Dockerfile
     ports:
     - "4200:4200" # Especifica los puertos de mapeo
-    links:
-    - node # Enlace al servicio node
   node: 
     build: spotify-api 
     ports:
