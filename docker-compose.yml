@@ -13,6 +13,7 @@ services:
     links:
     - database
   database:
+    container_name: my-mongodb
     image: mongo # Especifica la imagen para construir el contenedor
     ports:
     - "27017:27017"
