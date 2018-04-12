@@ -16,3 +16,6 @@ services:
     image: mongo # Especifica la imagen para construir el contenedor
     ports:
     - "27017:27017"
+    restart: always
+    volumes:
+    - data:/data/db
