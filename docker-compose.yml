@@ -18,7 +18,4 @@ services:
     - "27017:27017"
     restart: always
     volumes:
-    - data:/data/db
-    
-  volumes:
-   mongodata:
+    - ~/temp:/data/db
